@@ -1,0 +1,59 @@
+/* Custom Styles for Perfect Pizza */
+
+/* PAGE STYLES */
+body { 
+	font-family: 'Oxygen', sans-serif;
+}
+
+
+/* HEADER STYLES */
+.hero {
+	background-image: url(../img/pizzahero.jpg);
+	background-attachment: fixed;
+}
+
+.hero h1 {
+	font-family: 'Limelight', cursive;
+	color: #ffffff;
+	padding-top: 1.5em;
+	padding-bottom: 5em;
+    text-shadow: 1.5px 1.5px #990000;
+    font-size: 3.5em;
+}
+
+/* MAIN STYLES */
+main {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+main h2, h3 {
+	color: #ff0000;
+}
+
+label {
+	padding-top: 1em;
+}
+
+#total {
+	color: #ff0000;
+	font-size: 2.5em;
+	padding: 1em 1em;
+	border: .5px solid #ff0000;
+	background-color: #f2f2f2;
+}
+
+#month select, #year select {
+	padding: .5em;
+}
+
+/* FOOTER STYLES */
+footer {
+	background-color: #262626;
+	color: #ffffff;
+	padding: 25px;
+}
+
+
+
+

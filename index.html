@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    	<title>Perfect Pizza</title>
+
+    	<!-- Bootstrap -->
+    	<link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet" >
+      	
+      <!-- Perfect Pizza Custom Styles -->
+      <link href="css/styles.css" rel="stylesheet" >
+       	
+      <!--Favicons-->
+		  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+		  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+		  <link rel="manifest" href="/manifest.json">
+		  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+		  <meta name="apple-mobile-web-app-title" content="perfect pizza">
+		  <meta name="application-name" content="perfect pizza">
+		  <meta name="theme-color" content="#ffffff">
+
+      
+      
+    	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    	<!--[if lt IE 9]>
+      	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    	
+    	<!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Limelight" rel="stylesheet">
+
+  	</head>
+
+  	<body>
+  		<header> 
+        	<!-- REMOVE NAV FOR NOW<nav>
+          		<div class="container-fluid" role="navigation">
+            		<ul class="nav nav-tabs navbar-left" role="tablist">
+              			<li role="presentation" class="active"><a href="#index" aria-controls="#index" role="tab" data-toggle="tab"><img src="img/perfectpizzalogo.jpg" alt="Perfect Pizza Icon" /></a>
+              			<li role="presentation"><a href="#about" aria-controls="#about" role="tab" data-toggle="tab">About</a></li>
+              			<li role="presentation"><a href="#contact" aria-controls="#meet" role="tab" data-toggle="tab">Contact Us</a></li>
+            		</ul>
+          		</div>
+        	</nav>-->
+			<!--End Nav Section-->
+      		<section class="container-fluid hero">
+        		<div class="col-md-12">
+          		<img class="img-responsive center-block" src="img/perfectpizzalogo.png" alt="Perfect Pizza Logo"/>
+          		<h1 class="text-center">Your Perfect Pizza is Waiting!</h1>
+        		</div>
+      		</section>
+		  </header>
+		
+		<main class = "container">
+
+<!--========================= CONTACT INFORMATION FORM ========================-->
+			<div class = "row">
+				<div class = "col-md-8 col-md-offset-2">
+					<h2 class = "text-center">Place your order for a Perfect Pizza</h2>
+					<form id = "contact" class = "form-horizontal" method = "post" action = "">
+						
+            <h3 class = "text-center">Enter your delivery information</h3>
+						<div class="form-group">
+							<label for="name">Name: </label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name here">
+              <div id = "nameError"></div>
+							<label for="addresstype">Address Type: </label>
+							<select name="addresstype" id = "addresstype" class="form-control">
+  								<option value="house">House</option>
+  								<option value="apartment">Apartment</option>
+  								<option value="business">Business</option>
+  								<option value="campus">Campus</option>
+  								<option value="hotel">Hotel</option>
+  								<option value="dorm">Dorm</option>
+  								<option value="other">Other</option>
+							</select>
+							<label for="otheraddresstype">Other Type of Address: </label><input type="text" class="form-control" id="otheraddresstype" name="otheraddresstype" placeholder="Enter your other type of address here">
+              <div id = "otherAddressError"></div>
+							<label for="address">Street Address: </label>
+							<input type="text" class="form-control" id="address" name="address" placeholder="Enter your street address here">
+              <div id = "addressError"></div>
+							<label for="apt">Apartment #: </label>
+							<input type="text" class="form-control" id="apt" name="apt" placeholder="Enter your apt/suite/room number here">
+              <div id = "aptError"></div>
+							<label for="city">City: </label>
+							<input type="text" class="form-control" id="city" name="city" placeholder="Enter your city here">
+              <div id = "cityError"></div>
+							<label for="state">State: </label>
+							<input type="text" class="form-control" id="state" name="state" placeholder="Enter your two-letter state abbreviation here">
+              <div id = "stateError"></div>
+							<label for="zip">Zip: </label>
+							<input type="text" class="form-control" id="zip" name="zip" placeholder="Enter your five-digit zip code here">
+              <div id = "zipError"></div>
+							<label for="phone">Phone: </label>
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your 10 digit phone number here. Please enter numbers only">
+              <div id = "phoneError"></div>
+							<label for="email">Email: </label>
+							<input type="text" class="form-control" id="email" name="email" placeholder="Enter your email here">
+              <div id = "emailError"></div>
+						</div>
+          </form>
+        </div>
+      </div>
+      <hr>
+<!--========================= ORDER PIZZA FORM ========================-->
+
+      <div class = "row">
+        <div class = "col-md-8 col-md-offset-2">
+          <form id = "pizza" class = "form-horizontal" method = "post" action = "">
+            <h3 class="text-center">Build Your Pizza</h3>
+            <div id = "total">
+              
+            </div>
+            <div class="form-group">
+              <h4>Please select a crust to begin your order:</h4>
+              <div class = "dough">
+                  <label class="radio  radio-inline">
+                  <input type="radio" name="dough" id="handTossed" value="handTossed">Hand Tossed
+                  </label>
+
+                  <label class="radio  radio-inline">
+                  <input type="radio" name="dough" id="thinCrust" value="thinCrust">Thin Crust
+                  </label>
+                
+                  <label class="radio  radio-inline">
+                  <input type="radio" name="dough" id="newYork" value="newYork">
+                  New York Style
+                  </label>
+                
+                  <label class="radio  radio-inline">
+                  <input type="radio" name="dough" id="glutenFree" value="glutenFree">
+                  Gluten Free</label>
+                
+              </div>
+            </div>
+            <div class="form-group">
+              
+              <label for="pizzaSize">Choose a Size: </label>
+              <select name="pizzaSize" id = "pizzaSize" class="form-control">
+                  
+              </select>
+            </div>
+            <div class = "form-group" id = "toppings">  
+              <label for="cheese">Choose Your Cheese: </label>
+              <select name="cheese" id = "cheese" class="form-control">
+                  <option value="light">Light: no charge</option>
+                  <option selected value="normal">Normal: no charge</option>
+                  <option value="extra">Extra: + $2.99</option>
+                  <option value="double">Double: + $3.99</option>
+              </select>
+
+              <label for="sauce">Choose Your Sauce: </label>
+              <select name="sauce" id = "sauce" class="form-control">
+                  <option selected value="regular">Regular Tomato: no charge</option>
+                  <option value="hearty">Hearty Tomato: + $.99</option>
+                  <option value="bbq">BBQ Sauce: + $1.99</option>
+              </select>
+
+              <h4>Select additional toppings ($.99 each):</h4>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="pepperoni" value="pepperoni"> Pepperoni
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="sausage" value="sausage"> Sausage
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="ham" value="ham"> Ham
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="bacon" value="bacon"> Bacon
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="salami" value="salami"> Salami
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="peppers" value="peppers"> Peppers
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="olives" value="olives"> Olives
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="jalapenos" value="jalapenos"> Jalapenos
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="mushrooms" value="mushrooms"> Mushrooms
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="pineapple" value="pineapple"> Pineapple
+              </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="onion" value="onion"> Onion
+              </label>
+            
+            </div>
+						<button type="button" id = "pizzadone" class="btn btn-lg btn-danger">Finish Building Pizza</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+<!--========================= BILLING INFORMATION FORM ========================-->
+
+      <div class = "row">
+        <div class = "col-md-8 col-md-offset-2">
+          <form id = "billing" class = "form-horizontal" method = "post" action = "">
+            <h3 class = "text-center">Enter your billing information</h3>
+            <label class="checkbox">
+              <input type="checkbox" id="sameAs" value="sameAs"> Same as Delivery Info
+            </label>
+            
+              <label for="bname">Name: </label>
+                <input type="text" class="form-control" id="bname" name="bname" placeholder="Enter your name here">
+                <div id = "bnameError"></div>
+              <label for="baddress">Street Address: </label>
+                <input type="text" class="form-control" id="baddress" name="baddress" placeholder="Enter your street address here">
+                <div id = "baddressError"></div>
+              <label for="bapt">Apartment #: </label>
+                <input type="text" class="form-control" id="bapt" name="bapt" placeholder="Enter your apt/suite/room number here">
+                <div id = "baptError"></div>
+              <label for="bcity">City: </label>
+                <input type="text" class="form-control" id="bcity" name="bcity" placeholder="Enter your city here">
+                <div id = "bcityError"></div>
+              <label for="bstate">State: </label>
+                <input type="text" class="form-control" id="bstate" name="bstate" placeholder="Enter your two-letter state abbreviation here">
+                <div id = "bstateError"></div>
+              <label for="bzip">Zip: </label>
+                <input type="text" class="form-control" id="bzip" name="bzip" placeholder="Enter your five-digit zip code here">
+                <div id = "bzipError"></div>
+              
+                <label for="cc">Credit Card Number: </label>
+                <div id = "cctype"></div>
+                  <input type="text" class="form-control" id="cc" name="cc" placeholder="Enter your credit card number here">
+                  <div id = "ccError"></div> 
+                <label for="cvc">CVC Code: </label>
+                  <input type="text" class="form-control" id="cvc" name="cvc" placeholder="Enter your 3 or 4 digit CVC code here">
+                  <div id = "cvcError"></div>
+              
+              
+              <h4>Expiration Date:
+              <label for="month">Month:</label>
+              <select name="month" id = "month" class="form-inline">
+                  <option value="0">01 - January</option>
+                  <option value="1">02 - February</option>
+                  <option value="2">03 - March</option>
+                  <option value="3">04 - April</option>
+                  <option value="4">05 - May</option>
+                  <option value="5">06 - June</option>
+                  <option value="6">07 - July</option>
+                  <option value="7">08 - August</option>
+                  <option value="8">09 - September</option>
+                  <option value="9">10 - October</option>
+                  <option value="10">11 - November</option>
+                  <option value="11">12 - December</option>
+              </select> 
+              <label for="month">Year:</label>
+              <select name="year" id = "year" class="form-inline">
+                  <option selected value="default">Select a year</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+              </select> 
+              <div id = "dateError"></div> 
+              
+
+            <button type="submit" id = "billingDone" class="btn btn-lg btn-danger">Place Your Order</button>
+              
+          </form>
+        </div>
+				
+			</div>
+		</main>
+  		
+  		<footer id="footer" class="container-fluid">
+        	<section class="row">
+          		<div class="col-md-12 ">
+            		<h5 class="text-center">©Copyright 2015 Perfect Pizza</h5>
+            		<h6 class="text-center">Design and Built by Lea Ann Bradford</h6>
+          		</div>
+        	</section>
+      		
+		</footer>
+  		<!-- javascript -->
+    	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    	<script src="js/bootstrap.min.js"></script>
+		<script src="js/main.js"></script>
+  	</body>
+  </html>
